@@ -38,6 +38,12 @@ If you use EnsIR, please consider citing:
 * **2024.09.30**: EnsIR is accepted by NeurIPS 2024.
 
 
+## :pushpin: TODO
+
+- [x] Release code
+- [ ] Release all weights 
+- [ ] Release manuscript 
+
 ## :jigsaw: Visual Results 
 
 
