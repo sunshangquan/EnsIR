@@ -55,9 +55,29 @@ We prepare the test sets of three tasks inlcuding super-resolution (SR), deblurr
 
 | SR | Deblurring | Deraining |
 |:---------------:|:-----------------:|:-----------------:|
-| [Baidu Disk](https://pan.baidu.com/s/1T-Mzy2fR5sMobNIYZRS0CA?pwd=d5bd)[```pin: d5bd```] | [Baidu Disk](https://pan.baidu.com/s/1XJZdJeCiFhE5mfjSsUus0g?pwd=egj8)[```pin: egj8```] | [Baidu Disk](https://pan.baidu.com/s/1B5rvISkq8qwvd9itpJe-Fw?pwd=vtyt)[```pin: vtyt```] |
+| [Baidu Disk](https://pan.baidu.com/s/1T-Mzy2fR5sMobNIYZRS0CA?pwd=d5bd) [```pin: d5bd```] | [Baidu Disk](https://pan.baidu.com/s/1XJZdJeCiFhE5mfjSsUus0g?pwd=egj8) [```pin: egj8```] | [Baidu Disk](https://pan.baidu.com/s/1B5rvISkq8qwvd9itpJe-Fw?pwd=vtyt) [```pin: vtyt```] |
 
+File directory structure:
 
+datasets/
+│
+├── SR/
+│   ├── test
+│   │   ├── gt 
+│   │   │   ├── Set5
+│   │   │   │   ├── baby.png
+│   │   │   │   └── ...
+│   │   │   ├── Set 14
+│   │   │   │   ├── baboon.png
+│   │   │   │   └── ...
+│   │   ├── lq
+│   │   │   ├── ...
+│   │   ├── MambaIR
+│   │   │   ├── ...
+│   │   ├── ...  
+│
+├── deblurring/
+│
 
 ## :gear: Installation
 ```
