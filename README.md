@@ -96,26 +96,38 @@ pip install git+https://github.com/ldeecke/gmm-torch.git
 3. Estimate the ensemble weights by 
 
 ```
-python ensemble.py --yaml_file opt/ensemble/[TASK]]/[DATASET].yaml
+python ensemble.py --yaml_file opt/ensemble/[TASK]/[DATASET].yaml
 ```
 
-where ```[DATASET]``` could be one of filename in the ```opt/[TASK]]```. The estimated weights will be saved under ```./weights```.
+where ```[DATASET]``` could be one of filename in the ```opt/[TASK]```. The estimated weights will be saved under ```./weights```.
+
+### EXAMPLE:
+
+```
+python ensemble.py --yaml_file opt/ensemble/SR/Set5.yaml
+```
 
 ## :balance_scale: Evaluation
 
 1. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](https://github.com/sunshangquan/EnsIR?tab=readme-ov-file#jigsaw-visual-results).
 
 ```
-python ensemble.py --yaml_file opt/ensemble/[TASK]]/[DATASET].yaml
+python ensemble.py --yaml_file opt/ensemble/[TASK]/[DATASET].yaml
 ```
 
 2. Change ```precompute_weight``` for assigning pre-estimated weights in the ```.yaml``` file and inference the ensemble weights by 
 
 ```
-python ensemble.py --yaml_file opt/evaluate/[TASK]]/[DATASET].yaml
+python ensemble.py --yaml_file opt/evaluate/[TASK]/[DATASET].yaml
 ```
 
-where ```[DATASET]``` could be one of filename in the ```opt/[TASK]]```. 
+where ```[DATASET]``` could be one of filename in the ```opt/[TASK]```. 
+
+### EXAMPLE:
+
+```
+python ensemble.py --yaml_file opt/evaluate/SR/Set5.yaml
+```
 
 ## :balance_scale: Test on other datasets
 
@@ -126,7 +138,7 @@ where ```[DATASET]``` could be one of filename in the ```opt/[TASK]]```.
 3. Change the configurations in yaml file and run
 
 ```
-python ensemble.py --yaml_file opt/ensemble/[TASK]]/[DATASET].yaml
+python ensemble.py --yaml_file opt/ensemble/[TASK]/[DATASET].yaml
 ```
 
 
