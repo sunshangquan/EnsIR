@@ -59,6 +59,7 @@ We prepare the test sets of three tasks inlcuding super-resolution (SR), deblurr
 
 File directory structure:
 
+```
 datasets/
 │
 ├── SR/
@@ -78,6 +79,8 @@ datasets/
 │
 ├── deblurring/
 │
+└── deraining/
+```
 
 ## :gear: Installation
 ```
