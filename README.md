@@ -2,12 +2,10 @@
 
 <div align="center">
  
-[![paper](https://img.shields.io/badge/EnsIR-paper-blue.svg)]()
-[![arXiv](https://img.shields.io/badge/EnsIR-arXiv-red.svg)]()
+[![paper](https://img.shields.io/badge/EnsIR-paper-blue.svg)](https://arxiv.org/abs/2410.22959)
+[![arXiv](https://img.shields.io/badge/EnsIR-arXiv-red.svg)](https://arxiv.org/abs/2410.22959)
 [![](https://img.shields.io/badge/project-page-red.svg)]()
 [![poster](https://img.shields.io/badge/EnsIR-poster-green.svg)]()
-[![](https://img.shields.io/badge/EnsIR-supp-purple)]()     
-[![](https://img.shields.io/badge/chinese_blog-zhihu-blue.svg)]() 
 [![Closed Issues](https://img.shields.io/github/issues-closed/sunshangquan/EnsIR)](https://github.com/sunshangquan/EnsIR/issues?q=is%3Aissue+is%3Aclosed) 
 [![Open Issues](https://img.shields.io/github/issues/sunshangquan/EnsIR)](https://github.com/sunshangquan/EnsIR/issues) 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsunshangquan%2FEnsIR&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
@@ -26,23 +24,29 @@ Image restoration has experienced significant advancements due to the developmen
 ## :mega: Citation
 If you use EnsIR, please consider citing:
 
-    @article{,
-      
+    @misc{sun2024ensirensemblealgorithmimage,
+      title={EnsIR: An Ensemble Algorithm for Image Restoration via Gaussian Mixture Models}, 
+      author={Shangquan Sun and Wenqi Ren and Zikun Liu and Hyunhee Park and Rui Wang and Xiaochun Cao},
+      year={2024},
+      eprint={2410.22959},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2410.22959}, 
     }
     
 ---
 
 ## :rocket: News
-* **2024.10.30**: [Arxiv Paper]() is released.
-* **2024.10.20**: Codes and pre-trained weights are released.
+* **2024.10.31**: [Arxiv Paper](https://arxiv.org/abs/2410.22959) is released.
+* **2024.10.31**: Codes and pre-trained weights are released.
 * **2024.09.30**: EnsIR is accepted by NeurIPS 2024.
 
 
 ## :pushpin: TODO
 
 - [x] Release code
-- [ ] Release all weights 
-- [ ] Release manuscript 
+- [x] Release all weights 
+- [x] Release manuscript 
 
 ## :jigsaw: Visual Results 
 

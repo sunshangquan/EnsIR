@@ -11,7 +11,8 @@ from compute_psnr import compute_metrics
 
 from gmm_torch.gmm import GaussianMixture
 def reorganize(imgs_cad, img_gt, bin_width=5):
-    indices = imgs_cad // bin_width
+    # indices = imgs_cad // bin_width
+    indices = torch.div(imgs_cad, bin_width, rounding_mode='trunc')
     num_cad = imgs_cad.shape[0]
     num_bin_1d = math.ceil(256 / bin_width)
     data = {}
@@ -138,7 +139,7 @@ def learn_gmm(pix_gt_r, pix_cand_r, pPi_prev=None, default_weight=None):
             try:
                 pPi_r = GMM(pix_gt_r, pix_cand_, pPi_r_init)
             except:
-                print("???")
+                # print("???")
                 # pPi_r = torch.cat((torch.zeros(2),torch.ones(K) / K), 0)
                 pPi_r = pPi_r_init
                     
@@ -186,7 +187,8 @@ def ensemble_single(pPi_dict, imgs_cad, bin_width=5, return_weight=False):
     K, C, W, H = imgs_cad.shape
     img_ens = torch.zeros((1,C,W,H))
     wei_ens = torch.zeros((3,C,W,H))
-    indices = imgs_cad // bin_width
+    # indices = imgs_cad // bin_width
+    indices = torch.div(imgs_cad, bin_width, rounding_mode='trunc')
     num_cad = imgs_cad.shape[0]
     num_bin_1d = math.ceil(256 / bin_width)
     if num_cad == 1:
