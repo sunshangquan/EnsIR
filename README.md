@@ -48,7 +48,7 @@ If you use EnsIR, please consider citing:
 - [x] Release all weights 
 - [x] Release manuscript 
 
-## :jigsaw: Pre-inferenced Results 
+## :jigsaw: Pre-inferenced Results <a id="dataset_download"></a>
 
 
 We prepare the test sets of three tasks inlcuding super-resolution (SR), deblurring and deraining.
@@ -109,7 +109,7 @@ python ensemble.py --yaml_file opt/ensemble/SR/Set5.yaml
 
 ## :balance_scale: Evaluation
 
-1. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](https://github.com/sunshangquan/EnsIR?tab=readme-ov-file#jigsaw-visual-results).
+1. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](#dataset_download).
 
 ```
 python ensemble.py --yaml_file opt/ensemble/[TASK]/[DATASET].yaml
