@@ -91,7 +91,7 @@ pip install git+https://github.com/ldeecke/gmm-torch.git
 
 1. Obtain the reference set, which has been already prepared in ```./dataset/reference_set/[TASK]```, where ```[TASK]``` is one of ```SR```, ```deblurring```, ```deraining```.
 
-2. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](https://github.com/sunshangquan/EnsIR?tab=readme-ov-file#jigsaw-visual-results).
+2. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](#dataset_download).
 
 3. Estimate the ensemble weights by 
 
