@@ -1,0 +1,22 @@
+# Config file for super-resolution on Set5
+ensemble: 
+  name: ensir
+  bin_width: 32
+  if_save_fig: true
+  default_weight: ~
+  max_step: 1000
+  weight_file_path: ./precompute_weight
+  log_root_path: ./logs
+  save_root_path: ./result
+  precompute_weight: ~
+  test_y_channel: true
+  metric_types: ['psnr', 'ssim']
+  crop_border: 4
+
+task: SR
+dataset: 
+  name: Urban100
+  data_refn_path: ./dataset/reference_set/sr
+  data_root_path: /home/ssq/Desktop/phd/proj_ensembleIR/datasets/
+models: ["MambaIR", "SRFormer", 'SwinIR',]
+verbose: false

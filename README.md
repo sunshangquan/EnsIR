@@ -48,7 +48,7 @@ If you use EnsIR, please consider citing:
 - [x] Release all weights 
 - [x] Release manuscript 
 
-## :jigsaw: Visual Results 
+## :jigsaw: Pre-inferenced Results 
 
 
 We prepare the test sets of three tasks inlcuding super-resolution (SR), deblurring and deraining.
@@ -60,22 +60,51 @@ We prepare the test sets of three tasks inlcuding super-resolution (SR), deblurr
 
 
 ## :gear: Installation
-
-[TODO]
+```
+pip install git+https://github.com/ldeecke/gmm-torch.git
+```
 
 ## :hammer_and_wrench: Weight Estimation
 
-1. [TODO]
+1. Obtain the reference set, which has been already prepared in ```./dataset/reference_set/[TASK]```, where ```[TASK]``` is one of ```SR```, ```deblurring```, ```deraining```.
 
+2. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](https://github.com/sunshangquan/EnsIR?tab=readme-ov-file#jigsaw-visual-results).
+
+3. Estimate the ensemble weights by 
+
+```
+python ensemble.py --yaml_file opt/ensemble/[TASK]]/[DATASET].yaml
+```
+
+where ```[DATASET]``` could be one of filename in the ```opt/[TASK]]```. The estimated weights will be saved under ```./weights```.
 
 ## :balance_scale: Evaluation
 
-0. [TODO]
+1. Prepare the test results of base models, input, and ground-truth images by downloading [Pre-inferenced Results](https://github.com/sunshangquan/EnsIR?tab=readme-ov-file#jigsaw-visual-results).
 
+```
+python ensemble.py --yaml_file opt/ensemble/[TASK]]/[DATASET].yaml
+```
+
+2. Change ```precompute_weight``` for assigning pre-estimated weights in the ```.yaml``` file and inference the ensemble weights by 
+
+```
+python ensemble.py --yaml_file opt/evaluate/[TASK]]/[DATASET].yaml
+```
+
+where ```[DATASET]``` could be one of filename in the ```opt/[TASK]]```. 
 
 ## :balance_scale: Test on other datasets
 
-0. [TODO]
+1. Prepare the test results of base models, input, and ground-truth images
+
+2. Prepare the reference set of base models, input, and ground-truth images
+
+3. Change the configurations in yaml file and run
+
+```
+python ensemble.py --yaml_file opt/ensemble/[TASK]]/[DATASET].yaml
+```
 
 
 

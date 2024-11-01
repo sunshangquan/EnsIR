@@ -1,0 +1,22 @@
+# Config file for super-resolution on Set5
+ensemble: 
+  name: ensir
+  bin_width: 64
+  if_save_fig: false
+  default_weight: ~
+  max_step: 1000
+  weight_file_path: ./precompute_weight
+  log_root_path: ./logs
+  save_root_path: ./result
+  precompute_weight: ~
+  test_y_channel: false
+  metric_types: ['psnr', 'ssim']
+  crop_border: 0
+
+task: deblurring
+dataset: 
+  name: RealBlur_J
+  data_refn_path: ./dataset/reference_set/deblurring
+  data_root_path: /home/ssq/Desktop/phd/proj_ensembleIR/datasets/
+models: ["MPRNet", "Restormer", 'DGUNet']
+verbose: false

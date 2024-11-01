@@ -105,7 +105,7 @@ def get_files_names(path, method, dataset):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--yaml_file', default='opt/ensemble/SR/Set5.yaml', type=str, help='Path to config file')
+    parser.add_argument('--yaml_file', default='opt/evaluate/SR/Set5.yaml', type=str, help='Path to config file')
     args = parser.parse_args()
     yaml_file = args.yaml_file
     import yaml
@@ -146,21 +146,10 @@ if __name__ == '__main__':
     log_path = os.path.join(yml['ensemble'].pop('log_root_path'), task, dataset)
     os.makedirs(log_path, exist_ok=True)
     filenames_test = get_files_names(os.path.join(path, 'test'), 'gt', dataset)
-    bin_width = yml['ensemble'].pop('bin_width')
+    bin_width = int(yml['ensemble'].pop('bin_width'))
     weight_file = os.path.join(weight_file_path, "weight_{}_{}_b{}_rgb.pth".format(dataset, "_".join(models), bin_width))
     weight = yml['ensemble'].pop('precompute_weight')
-    default_weight = yml['ensemble'].pop('default_weight')
-    default_weight = torch.tensor(default_weight) if default_weight is not None else None
     print("Loading ensemble method:", ensemble_type)
-    if ensemble_type == 'ensir':# and not os.path.exists(weight_file):
-        filenames_train = get_files_names(path_refn, 'gt', '')
-        imgs_cad, img_gt = read_imgs(path_refn, '', models, filenames_train, if_flatten=True)
-        weight = compute_ensemble_weight(imgs_cad, img_gt, weight_file, bin_width, verbose, default_weight) 
-    elif ensemble_type not in ['ensir', 'avg', 'zzpm']:
-        filenames_train = get_files_names(os.path.join(path, 'train'), 'gt', '')
-        imgs_cad, img_gt = read_imgs(os.path.join(path, 'train'), '', models, filenames_train, if_flatten=True)
-        weight = compute_regressor_weight(imgs_cad, img_gt, ensemble_type) 
-        print(weight)
 
     log_file = os.path.join(log_path, "{}_{}".format(ensemble_type, "+".join(models)))
     if os.path.isfile(log_file):
