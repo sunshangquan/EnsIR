@@ -4,8 +4,8 @@
  
 [![paper](https://img.shields.io/badge/EnsIR-paper-blue.svg)](https://arxiv.org/abs/2410.22959)
 [![arXiv](https://img.shields.io/badge/EnsIR-arXiv-red.svg)](https://arxiv.org/abs/2410.22959)
-[![](https://img.shields.io/badge/project-page-red.svg)]()
-[![poster](https://img.shields.io/badge/EnsIR-poster-green.svg)]()
+[![](https://img.shields.io/badge/project-page-red.svg)](https://sunsean21.github.io/ensir.html)
+[![poster](https://img.shields.io/badge/EnsIR-poster-green.svg)](https://sunsean21.github.io/resources/pdf/poster_neurips24_ensir.pdf)
 [![Closed Issues](https://img.shields.io/github/issues-closed/sunshangquan/EnsIR)](https://github.com/sunshangquan/EnsIR/issues?q=is%3Aissue+is%3Aclosed) 
 [![Open Issues](https://img.shields.io/github/issues/sunshangquan/EnsIR)](https://github.com/sunshangquan/EnsIR/issues) 
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fsunshangquan%2FEnsIR&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
